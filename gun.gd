@@ -11,3 +11,7 @@ func _physics_process(delta):
 
 func shoot():
 	const BULLET = preload("res://bullet.tscn")
+	# instantiate is function to unload scenes to create a new instance of scenes
+	var new_bullet = BULLET.instantiate()
+	new_bullet.global_position = %ShootingPoint.global_position
+	%ShootingPoint.add_child(new_bullet)
