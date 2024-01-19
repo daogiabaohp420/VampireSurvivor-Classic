@@ -8,3 +8,6 @@ func _physics_process(delta):
 		# .front() = [0]
 		var target_enemy = enemies_in_range.front()
 		look_at(target_enemy.global_position)
+
+func shoot():
+	const BULLET = preload("res://bullet.tscn")
