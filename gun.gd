@@ -14,4 +14,9 @@ func shoot():
 	# instantiate is function to unload scenes to create a new instance of scenes
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %ShootingPoint.global_position
+	new_bullet.global_rotation = %ShootingPoint.global_rotation
 	%ShootingPoint.add_child(new_bullet)
+
+
+func _on_timer_timeout():
+	shoot()
